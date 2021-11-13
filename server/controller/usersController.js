@@ -1,6 +1,6 @@
 const chalk = require("chalk");
 const debug = require("debug")("socialNetwork:usersController");
-const User = require("../../database/models/user");
+const { User } = require("../../database/models/user");
 
 const getUsers = async (req, res, next) => {
   try {
