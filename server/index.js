@@ -2,6 +2,7 @@ const chalk = require("chalk");
 const debug = require("debug")("socialNetwork:indexServer");
 const express = require("express");
 const morgan = require("morgan");
+const { notFoundHandler, finalErrorHandler } = require("./middlewares/error");
 const usersRoutes = require("./routes/usersRoutes");
 
 const app = express();
@@ -43,5 +44,8 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use("/users", usersRoutes);
+
+app.use(notFoundHandler);
+app.use(finalErrorHandler);
 
 module.exports = initializeServer;
