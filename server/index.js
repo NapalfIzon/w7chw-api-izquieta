@@ -2,6 +2,7 @@ const chalk = require("chalk");
 const debug = require("debug")("socialNetwork:indexServer");
 const express = require("express");
 const morgan = require("morgan");
+const usersRoutes = require("./routes/usersRoutes");
 
 const app = express();
 
@@ -40,5 +41,7 @@ const initializeServer = (port) =>
 app.use(morgan("dev"));
 
 app.use(express.json());
+
+app.use("/users", usersRoutes);
 
 module.exports = initializeServer;
