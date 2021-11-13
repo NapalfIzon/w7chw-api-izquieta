@@ -19,7 +19,9 @@ const initializeMongoDb = (endpoint) =>
       virtuals: true,
       transform: (doc, ret) => {
         // eslint-disable-next-line no-underscore-dangle
-        delete ret._id; // TODO aquí tocará ver el formato de _V para quitarlo también
+        delete ret._id;
+        // eslint-disable-next-line no-underscore-dangle
+        delete ret.__V;
       },
     });
   });
