@@ -48,4 +48,4 @@ app.use("/users", usersRoutes);
 app.use(notFoundHandler);
 app.use(finalErrorHandler);
 
-module.exports = initializeServer;
+module.exports = { app, initializeServer };
