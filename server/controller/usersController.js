@@ -38,7 +38,8 @@ const registerUser = async (req, res, next) => {
       enemies: userData.enemies,
     });
     debug(chalk.bgGreen.red("Se ha hecho un POST en /users/register OK"));
-    res.json(newUser);
+    debugger;
+    res.status(201).json(newUser);
   } catch {
     const error = new Error("Fallo al crear usuario: datos incorrectos.");
     error.code = 400;
