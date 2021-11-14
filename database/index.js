@@ -20,8 +20,6 @@ const initializeMongoDb = (endpoint) =>
       transform: (doc, ret) => {
         // eslint-disable-next-line no-underscore-dangle
         delete ret._id;
-        // eslint-disable-next-line no-underscore-dangle
-        delete ret.__V;
       },
     });
   });

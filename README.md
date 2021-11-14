@@ -26,4 +26,8 @@ Removed relationship: Luis & Marta
 
 ## Endpoints designados
 
-[GET]/users - Hace un listado de users
+[GET]/users - Hace un listado de users (temporal)
+
+[POST]/users/register - Registra a un usuario
+
+[LOGIN]/users/login - Loguea a un usuario, devolviendo el token para autenticación

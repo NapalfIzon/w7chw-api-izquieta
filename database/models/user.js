@@ -44,7 +44,7 @@ const schema = {
   },
 };
 
-const userSchema = new Schema(schema);
+const userSchema = new Schema(schema, { versionKey: false });
 
 const User = model("User", userSchema, "users");
 
