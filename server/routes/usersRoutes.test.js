@@ -13,7 +13,7 @@ const testedUsers = [
   {
     _id: "618b8c2aced14353aa06a7ca",
     username: "random",
-    password: "random",
+    password: process.env.PASSWORD_TEST_1,
     name: "Random user",
     age: 35,
     bio: "Im a random user",
@@ -27,7 +27,7 @@ const testedUsers = [
   {
     _id: "618b8c2aced14353aa06a7cb",
     username: "random2",
-    password: "random2",
+    password: process.env.PASSWORD_TEST_2,
     name: "Random2 user",
     age: 35,
     bio: "Im a random2 user",
@@ -41,7 +41,7 @@ const testedUsers = [
   {
     _id: "618b8c2aced14353aa06a7cc",
     username: "random3",
-    password: "random3",
+    password: process.env.PASSWORD_TEST_3,
     name: "Random3 user",
     age: 35,
     bio: "Im a random3 user",

@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { User } = require("../../database/models/user");
 const { getUsers, registerUser } = require("./usersController");
 
@@ -42,7 +43,7 @@ describe("Given a registerUser function", () => {
     test("The it should invoke res.json with the new user.", async () => {
       const testedUser = {
         username: "random",
-        password: "random",
+        password: process.env.PASSWORD_TEST_1,
         name: "Random user",
         age: 35,
         bio: "Im a random user",
