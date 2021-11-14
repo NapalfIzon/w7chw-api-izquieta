@@ -6,6 +6,7 @@ const { notFoundHandler, finalErrorHandler } = require("./middlewares/error");
 const usersRoutes = require("./routes/usersRoutes");
 
 const app = express();
+app.disable("x-powered-by");
 
 const initializeServer = (port) =>
   new Promise((resolve, reject) => {
