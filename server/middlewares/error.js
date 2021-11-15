@@ -9,7 +9,7 @@ const notFoundHandler = (req, res) => {
   res.status(404).json({ error: "Endpoint no encontrado." });
 };
 
-const finalErrorHandler = (error, req, res, next) => {
+const finalErrorHandler = (error, req, res) => {
   if (error instanceof ValidationError) {
     debug(chalk.bgRed.cyan("Se ha detectado un error no definido ಥ╭╮ಥ"));
     error.code = 400;
