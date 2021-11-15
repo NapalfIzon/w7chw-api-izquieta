@@ -2,6 +2,7 @@ const chalk = require("chalk");
 const debug = require("debug")("socialNetwork:indexServer");
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 const { notFoundHandler, finalErrorHandler } = require("./middlewares/error");
 const usersRoutes = require("./routes/usersRoutes");
 
@@ -41,6 +42,7 @@ const initializeServer = (port) =>
   });
 
 app.use(morgan("dev"));
+app.use(cors());
 
 app.use(express.json());
 
