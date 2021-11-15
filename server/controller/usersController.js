@@ -40,7 +40,6 @@ const registerUser = async (req, res, next) => {
       enemies: userData.enemies,
     });
     debug(chalk.bgGreen.red("Se ha hecho un POST en /users/register OK"));
-    debugger;
     res.status(201).json(newUser);
   } catch {
     const error = new Error("Fallo al crear usuario: datos incorrectos.");
@@ -57,7 +56,6 @@ const loginUser = async (req, res, next) => {
   const userData = await User.findOne({ username });
   if (userData) {
     const checkedPassword = await bcrypt.compare(password, userData.password);
-
     if (checkedPassword) {
       const token = jwt.sign(
         {
